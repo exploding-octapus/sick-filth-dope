@@ -44,7 +44,16 @@ sudo apt-get install gparted
 sudo snap install snapd
 sudo install snap store
 >file 
-
+apt install cryptsetup
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2c
+sudo cryptsetup open /dev/sda3. 2c <Spleen>
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2a
+sudo cryptsetup open /dev/sda3. 2a <LeftPsyche>
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2b
+sudo cryptsetup open /dev/sda3. 2b <RightPsyche>
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2b
+sudo cryptsetup open /dev/sda3. 2d <Skull>
+>file 
  ●,.:°` READ ME BY BRENTON HOPKINS `°:..,●
 
  Mindguard 
