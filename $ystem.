@@ -8,11 +8,11 @@ ufw default allow outgoing
 ♡
 apt install cryptsetup
 sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda0
-sudo cryptsetup open /dev/sda0 <Sick>
+sudo cryptsetup open /dev/sda0 <Yummi0>
 sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda1
-sudo cryptsetup open /dev/sda1 <Filth>
+sudo cryptsetup open /dev/sda1 <Yummi1>
 sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda2
-sudo cryptsetup open /dev/sdxy <Dope>
+sudo cryptsetup open /dev/sdxy <Yummi2>
 ♡
 ○○○
 sudo get upgrade
@@ -24,6 +24,7 @@ sudo snap install core
 sudo apt update 
 sudo apt install torbrowser-launcher
 git clone https://github.com/roytam1/palemoon27
+git clone https://github.com/hmlendea/gfn-electron
 apt install libgtk-2.0-dev
 git clone https://github.com/asbestomolesto/mindguard
 git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project
