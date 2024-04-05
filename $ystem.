@@ -1,53 +1,122 @@
-lèt me Install onto you a very cool system 
+lèt me Install onto you a very cool system.
+My name is Brenton and I run Exploding Octapus, Handsome Boy Moddling School, The sweatshop Union, Jelly Baby Protection Society,
+(JellyBabyPSi), Galacticly Fly and a few other organisations.
+If a morgellon died between 2012 and 2023 - It was done by my hand.
+If someone was helped, also, It was done by Us.
+I was raised by Angels.
+We are The "A"
+<^>
+Well heres Your System, Honey!
+<^>
+dont give the Cookie Dough, (this code) to anyone OK! Its just for You Three, Kinda a constalation prize for being my biological daughters. 
+<You Must preserve the code>
+(maybe put your hand over it)
+Press: ALT+F4
+debootstrap
+sudo get upgrade
+*^*
+.............<^> VERY SECRET CODE, OK!! <^>
+♡ This secret code will help You remember Everything - Keep it secret ♡
+<^>
+apt install cryptsetup
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2c
+sudo cryptsetup open /dev/sda3. 2c <SparkMind1>
+>file
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2a
+sudo cryptsetup open /dev/sda3. 2a <SparkMind2>
+>file
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2b
+sudo cryptsetup open /dev/sda3. 2b <SparkMind3>
+>file
+sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2b
+sudo cryptsetup open /dev/sda3. 2d <SparkMind4>
 ♡
+○○○
+sudo get upgrade
+sudo apt update
+♡
+
+flash install system
+sudo apt update
+sudo apt install snapd
+sudo snap install core
+sudo apt update
+>file
 sudo get upgrade 
 apt-get install ufw
 ufw enable
 ufw default deny incoming
 ufw default allow outgoing
-♡
-apt install cryptsetup
-
-♡
-○○○
-sudo get upgrade
-♡
-flash install system
-sudo apt update
-sudo apt install snapd
-sudo snap install core
-sudo apt update 
-sudo apt install torbrowser-launcher
-git clone https://github.com/roytam1/palemoon27
-git clone https://github.com/hmlendea/gfn-electron
+sudo snap install snapd
 apt install libgtk-2.0-dev
 git clone https://github.com/asbestomolesto/mindguard
+>file
+git clone https://github.com/mayankmetha/Rucky
 git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project
+sudo apt install torbrowser-launcher
+>file
+git clone https://github.com/roytam1/palemoon27
+git clone https://github.com/LibreOffice/core
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+>file
+Delay: 150
+sudo apt install ./google-chrome-stable_current_amd64.deb
+cat /etc/apt/sources.list.d/google-chrome.list
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+sudo apt update
+sudo apt upgrade
+ * Here is also an Enclyclopedia for You !*
+sudo apt install -y php php-intl php-mbstring php-xml php-apcu php-curl php-sqlite3 composer
+git clone https://gerrit.wikimedia.org/r/mediawiki/core.git mediawiki && git clone https://gerrit.wikimedia.org/r/mediawiki/skins/Vector.git mediawiki/skins/Vector && cd mediawiki
+composer update
+composer mw-install:sqlite
+Delay: 75
+>file
+git clone https://github.com/hmlendea/gfn-electron
+git clone https://github.com/pointfeev/CreamInstaller
+git clone https://github.com/NVIDIAGameWorks/GeForceNOW-SDK
+>file
+git clone https://github.com/YoobieRE/uplay-install-reverse
+git clone https://github.com/CC-in-the-Cloud/General
+git clone https://github.com/itc-wgtools/New-iTC-Admin-template
+>file
+git clone https://github.com/tekgator/GameLib.NET
+git clone https://github.com/mmvanheusden/SteamDepotDownloaderGUI
+git clone https://github.com/SteamRE/DepotDownloader/releases/tag/DepotDownloader_2.4.7
+>file
 git clone https://github.com/dolph/dictionary/find/master
-$ cat /usr/share/dict/words | wc -l 235886
-$ cat enable1.txt | wc -l 172819
-$ cat popular.txt | wc -l 25322
+cat /usr/share/dict/words | wc -l 235886
+cat enable1.txt | wc -l 172819
+cat popular.txt | wc -l 25322
+>file
+git clone https://github.com/ageitgey/face_recognition
+git clone https://github.com/gqrx-sdr/gqrx
+git clone https://github.com/whid-injector/WHID
+>file
+git clone https://github.com/wiglenet/wigle-wifi-wardriving
+git clone https://github.com/BadException/Flipper-Xtreme
+git clone https://github.com/RogueMaster/flipperzero-firmware-wPlugins
+>file
 git clone https://salsa.debian.org/freedombox-team/freedombox.git
 git clone https://github.com/ooni/probe
 git clone https://github.com/hrtywhy/Hanoman
+>file
+git clone https://github.com/trench-moe/Pornhub-6.11-App-Decompiled
+git clone https://github.com/R2D4C3PO/PornHub-Premium-Generator
+>file
 sudo snap install klettres
 git clone https://github.com/skyjake/Doomsday-Engine.git
 git clone https://github.com/ValveSoftware/halflife
+>file
 sudo snap install boa
 git clone https://github.com/mitallast/diablo-js
-sudo apt-get install gparted
-sudo snap install snapd
+git clone https://github.com/topjohnwu/Magisk
+git clone https://github.com/FerryAr/lhroot
+>file
 sudo install snap store
+sudo apt-get install gparted
 >file 
 apt install cryptsetup
-sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2c
-sudo cryptsetup open /dev/sda3. 2c <Spleen>
-sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2a
-sudo cryptsetup open /dev/sda3. 2a <LeftPsyche>
-sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2b
-sudo cryptsetup open /dev/sda3. 2b <RightPsyche>
-sudo cryptsetup --hash sha512 --verbose --cipher aes-xts-plain --key-size 512 luksFormat /dev/sda3. 2b
-sudo cryptsetup open /dev/sda3. 2d <Skull>
 >file 
 https://github.com/indutny/elliptic
 node benchmarks/index.js
@@ -55,25 +124,49 @@ Benchmarking: sign
 Benchmarking: verify
 Benchmarking: gen
 Benchmarking: ecdh
+>file
 var EC = require('elliptic').ec;
 var ec = new EC('secp256k1');
 var key = ec.genKeyPair();
+>file
 var msgHash = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 var signature = key.sign(msgHash);
 var derSign = signature.toDER();
 console.log(key.verify(msgHash, derSign));
 var pubPoint = key.getPublic();
+>file
 var x = pubPoint.getX();
 var y = pubPoint.getY();
 var pub = { x: x.toBuffer(), y: y.toBuffer() };
+>file
 var pub = { x: x.toArrayLike(Buffer), y: y.toArrayLike(Buffer) };
 var key = ec.keyFromPublic(pub, 'hex');
 var signature = { r: 'b1fc...', s: '9c42...' };
 console.log(key.verify(msgHash, signature));
+>file
+<here is something to do for Wikipedia to work>
+Start PHP's built-in webserver, and open localhost:4000 in a browser to see your MediaWiki instance. 
+To log in as an administrator, use username (Admin) and password (adminpassword)
+*^*
+<^>
+●,.:°` $ysten BY BRENTON From Exploding Octapus`°:..,●
+PLease tell  me if the eliptical curve encryption worked,
+its the first time I have used it.
+I really love you kids..
+please leave Liam Druhan to his own devices. If I am to Reposess my life from the Shady fucks that have Quested it for the last 20 Years,
+I'm going to have to Kill the 3 Basterds That put my in this Situation - And that is the three gang-stalkers that done it to me..
+* THe Three Asssholes are * 
+1- Liam Sean Druhan (My Vampire Brother)
+2- Perry Oppenheimer (Percy Wednesday)
+3- Thomas Luke Papitheohari (The guy who Took My Leg)
 
- ●,.:°` $ysten BY BRENTON HOPKINS `°:..,●
+Please dont do what anyone tells you to do - I would never control You, 
+And if anyone ever does, Its because They never received an education from JellyBaby Primary.
+we all know well - that Authority is absolute Abomination. Its the first Class we learn..
 
+My Wifi Details Are:
+SSID: TP-Link_FF47
+Password: 
 
- 
  I will write you a cool READ ME.
  just later.
