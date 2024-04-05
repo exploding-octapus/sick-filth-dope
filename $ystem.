@@ -124,7 +124,7 @@ sudo apt-get install gparted
 >file 
 apt install cryptsetup
 >file 
-https://github.com/indutny/elliptic
+git clone https://github.com/indutny/elliptic
 node benchmarks/index.js
 Benchmarking: sign
 Benchmarking: verify
