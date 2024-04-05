@@ -35,7 +35,6 @@ sudo cryptsetup open /dev/sda3. 2d <SparkMind4>
 sudo get upgrade
 sudo apt update
 ♡
-
 flash install system
 sudo apt update
 sudo apt install snapd
@@ -46,6 +45,7 @@ sudo get upgrade
 apt-get install ufw
 ufw enable
 ufw default deny incoming
+>file
 ufw default allow outgoing
 sudo snap install snapd
 apt install libgtk-2.0-dev
@@ -53,8 +53,10 @@ git clone https://github.com/asbestomolesto/mindguard
 >file
 git clone https://github.com/mayankmetha/Rucky
 git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project
+git clone https://github.com/lencx/ChatGPT
 sudo apt install torbrowser-launcher
 >file
+git clone git@github.com:opengapps/opengapps.git
 git clone https://github.com/roytam1/palemoon27
 git clone https://github.com/LibreOffice/core
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -103,15 +105,19 @@ git clone https://github.com/hrtywhy/Hanoman
 >file
 git clone https://github.com/trench-moe/Pornhub-6.11-App-Decompiled
 git clone https://github.com/R2D4C3PO/PornHub-Premium-Generator
+git clone https://github.com/infiniflow/ragflow
 >file
 sudo snap install klettres
+git clone https://github.com/halo-dev/halo
 git clone https://github.com/skyjake/Doomsday-Engine.git
 git clone https://github.com/ValveSoftware/halflife
 >file
 sudo snap install boa
 git clone https://github.com/mitallast/diablo-js
+>file
 git clone https://github.com/topjohnwu/Magisk
 git clone https://github.com/FerryAr/lhroot
+composer serve
 >file
 sudo install snap store
 sudo apt-get install gparted
@@ -149,7 +155,7 @@ Start PHP's built-in webserver, and open localhost:4000 in a browser to see your
 To log in as an administrator, use username (Admin) and password (adminpassword)
 *^*
 <^>
-●,.:°` $ysten BY BRENTON From Exploding Octapus`°:..,●
+●,.:°` $ysten BY BRENTON From Exploding Octapus (also from the "Sweatshop Union)`°:..,●
 PLease tell  me if the eliptical curve encryption worked,
 its the first time I have used it.
 I really love you kids..
@@ -159,14 +165,14 @@ I'm going to have to Kill the 3 Basterds That put my in this Situation - And tha
 1- Liam Sean Druhan (My Vampire Brother)
 2- Perry Oppenheimer (Percy Wednesday)
 3- Thomas Luke Papitheohari (The guy who Took My Leg)
-
+<^>
 Please dont do what anyone tells you to do - I would never control You, 
 And if anyone ever does, Its because They never received an education from JellyBaby Primary.
 we all know well - that Authority is absolute Abomination. Its the first Class we learn..
 
 My Wifi Details Are:
 SSID: TP-Link_FF47
-Password: 
+Password: L7E9UG4gbFqGBkGt
 
  I will write you a cool READ ME.
  just later.
