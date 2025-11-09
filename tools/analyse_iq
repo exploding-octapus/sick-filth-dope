@@ -1,0 +1,137 @@
+#!/usr/bin/env python3
+"""
+analyze_iq.py
+
+Simple CLI analysis that:
+- Loads interleaved float32 IQ (.iq) or .npy complex IQ
+- Computes PSD snapshots
+- Generates a waterfall (spectrogram) image
+- Maps probe grid positions to a simple heatmap using snapshot band-power
+
+Usage:
+  python3 tools/analyze_iq.py --iq runs/<run_id>/simulated_captures/mindguard_sim_001.iq --manifest experiments/manifests/example_manifest.yaml --outdir runs/<run_id>/analysis
+"""
+import argparse
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+import json
+import yaml
+from scipy.signal import welch, spectrogram
+
+def load_iq(path):
+    if path.endswith(".npy"):
+        arr = np.load(path)
+        return arr.astype(np.complex64)
+    else:
+        data = np.fromfile(path, dtype=np.float32)
+        if data.size % 2 != 0:
+            raise ValueError("IQ file length not even; expecting interleaved float32 I,Q")
+        i = data[0::2]
+        q = data[1::2]
+        return (i + 1j*q).astype(np.complex64)
+
+def compute_psd(iq, fs, nperseg=4096):
+    f, Pxx = welch(iq, fs=fs, nperseg=nperseg, return_onesided=True)
+    Pdb = 10 * np.log10(Pxx + 1e-20)
+    return f, Pdb
+
+def make_waterfall(iq, fs, outpath):
+    f, t, Sxx = spectrogram(iq, fs=fs, nperseg=2048, noverlap=1024)
+    Sdb = 10 * np.log10(Sxx + 1e-20)
+    plt.figure(figsize=(10,4))
+    plt.pcolormesh(t, f, Sdb, shading='gouraud', cmap='viridis')
+    plt.ylabel('Freq [Hz]')
+    plt.xlabel('Time [s]')
+    plt.title('Waterfall (spectrogram)')
+    plt.colorbar(label='PSD (dB)')
+    plt.tight_layout()
+    plt.savefig(outpath, dpi=150)
+    plt.close()
+
+def band_power(iq, fs, band):
+    # band = (f_lo, f_hi)
+    f, Pdb = compute_psd(iq, fs)
+    mask = (f >= band[0]) & (f <= band[1])
+    if not np.any(mask):
+        return -999.0
+    return float(np.mean(Pdb[mask]))
+
+def heatmap_from_snapshots(iq, fs, manifest, outdir):
+    # For simulated run: split IQ into snapshots per probe as a simple demo
+    probe_positions = manifest['probe_grid']['positions']
+    snapshots = manifest['capture_parameters'].get('snapshots', 5)
+    n = len(iq)
+    seg = max(1, n // snapshots)
+    band = (manifest['capture_parameters'].get('center_freq_hz',0) - manifest['capture_parameters'].get('freq_span_hz',0)/2,
+            manifest['capture_parameters'].get('center_freq_hz',0) + manifest['capture_parameters'].get('freq_span_hz',0)/2)
+    powers = []
+    for i in range(snapshots):
+        start = i*seg
+        stop = min(n, (i+1)*seg)
+        s = iq[start:stop]
+        p = band_power(s, fs, band)
+        powers.append(p)
+    # Map snapshot powers to probe positions (wrap if counts differ)
+    vals = np.array([powers[i % len(powers)] for i in range(len(probe_positions))])
+    xs = np.array([p[0] for p in probe_positions])
+    ys = np.array([p[1] for p in probe_positions])
+    # Simple scatter heatmap
+    plt.figure(figsize=(6,4))
+    sc = plt.scatter(xs, ys, c=vals, cmap='inferno', s=300, edgecolor='k')
+    plt.gca().invert_yaxis()
+    plt.colorbar(sc, label='Band power (dB)')
+    plt.title('Near-field heatmap (simulated mapping)')
+    plt.xlabel('X mm'); plt.ylabel('Y mm')
+    plt.tight_layout()
+    plt.savefig(os.path.join(outdir, "nearfield_heatmap.png"), dpi=150)
+    plt.close()
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--iq", required=True)
+    p.add_argument("--manifest", required=True)
+    p.add_argument("--outdir", default="analysis")
+    args = p.parse_args()
+
+    ensure = os.path.abspath(args.outdir)
+    os.makedirs(ensure, exist_ok=True)
+
+    with open(args.manifest,"r") as f:
+        manifest = yaml.safe_load(f)
+
+    iq = load_iq(args.iq)
+    fs = float(manifest['capture_parameters']['samplerate_hz'])
+
+    # PSD over entire capture
+    f, Pdb = compute_psd(iq, fs)
+    plt.figure(figsize=(8,3))
+    plt.plot(f, Pdb)
+    plt.title("PSD (full capture)")
+    plt.xlabel("Freq [Hz]")
+    plt.ylabel("Power (dB)")
+    plt.tight_layout()
+    plt.savefig(os.path.join(ensure, "psd_full.png"), dpi=150)
+    plt.close()
+
+    # Waterfall
+    make_waterfall(iq, fs, os.path.join(ensure, "waterfall.png"))
+
+    # Near-field heatmap (simulated mapping)
+    heatmap_from_snapshots(iq, fs, manifest, ensure)
+
+    # Save summary metadata
+    summary = {
+        "psd_image": "psd_full.png",
+        "waterfall_image": "waterfall.png",
+        "heatmap_image": "nearfield_heatmap.png",
+        "samples": int(len(iq)),
+        "samplerate_hz": fs
+    }
+    with open(os.path.join(ensure, "analysis_summary.json"), "w") as f:
+        json.dump(summary, f, indent=2)
+
+    print(f"[+] Analysis complete. Outputs in {ensure}")
+
+if __name__ == "__main__":
+    main()
