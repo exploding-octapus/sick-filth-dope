@@ -1,0 +1,27 @@
+# Mindguard Hardware Safety & Emissions Lab
+
+Purpose
+- Educational toolkit for measuring, documenting, and mitigating unintended electromagnetic emissions from PCBs and consumer devices.
+- Focus on transparency, reproducibility, and ethical practice.
+- Not intended for any form of human-targeted remote stimulation, mind control, or covert behaviour modification.
+
+Core principles
+- Consent and accountability: all experiments must have informed consent and institutional approval where human subjects or sensitive environments are involved.
+- Local, benign measurement: all instrumentation collects hardware telemetry only; no attempts to modulate people or transmit signals to influence behaviour.
+- Open methods: publish measurements, mitigation techniques, and code so results are auditable and reproducible.
+
+Contents
+- /docs — lab checklist, measurement guides, safety notes
+- /hardening — practical hardening checklist and layout guidance
+- /tools — benign instrumentation scripts and examples (local logging only)
+- /ethics.md — contributor ethics policy and required sign-off
+
+Quick start
+1. Read `docs/LAB_CHECKLIST.md` and `ethics.md`.
+2. Assemble a basic emissions kit (spectrum analyzer or SDR, passive probes, near-field probe if available).
+3. Run `tools/rf_survey.py` with local scope to gather hardware-only telemetry.
+4. Publish anonymized, reproducible reports for peer review.
+
+License and contribution
+- Prefer a permissive license with an ethics addendum (e.g., MIT + ethics clause).
+- All contributors must sign the Ethics Contributor Agreement before merging.
