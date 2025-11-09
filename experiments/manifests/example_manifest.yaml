@@ -1,0 +1,59 @@
+# example_manifest.yaml
+# Reproducible experiment manifest for a safe, contained emissions test
+experiment_id: mindguard_sim_001
+title: Simulated two-tone capture with burst hotspot
+created_by: brenton
+created_at: 2025-11-10T03:20:00Z
+purpose: >
+  Reproducible simulated IQ capture to exercise the pipeline and validate analysis
+  and plotting tools without any over-the-air transmissions.
+hardware:
+  sdr: simulated_iq
+  signal_generator: simulated
+  probes: simulated_nearfield
+device_under_test:
+  model: example-board-v1
+  firmware: sim-0.0.1
+  orientation: top-facing
+probe_grid:
+  origin_mm: [0, 0, 0] # reference corner on DUT silkscreen
+  step_mm: [10, 10]
+  positions:
+    - [0, 0, 5]
+    - [10, 0, 5]
+    - [20, 0, 5]
+    - [0, 10, 5]
+    - [10, 10, 5]
+    - [20, 10, 5]
+capture_parameters:
+  mode: simulated
+  samplerate_hz: 2000000
+  center_freq_hz: 0
+  freq_span_hz: 1000000
+  duration_s: 5
+  snapshots: 5
+  snapshot_interval_s: 1
+stimulus:
+  simulated_iq_file: ../simulated_captures/mindguard_sim_001.iq
+  tones:
+    - freq_hz: 100000
+      amp: 0.8
+    - freq_hz: 300000
+      amp: 0.5
+  noise_sigma: 0.01
+  burst:
+    start_s: 0.2
+    duration_s: 0.05
+    burst_rate_hz: 5000
+metadata_logging:
+  save_iq: true
+  save_psd: true
+  save_waterfall: true
+  anonymize_device_id: true
+safety_and_ethics:
+  containment: simulated_only
+  irb_approval: not_applicable
+  consent_required: false
+notes:
+  - "This manifest is fully simulated. Follow docs/LAB_CHECKLIST.md for an equivalent hardware test inside a Faraday cage with real SDR."
+  - "All outputs must be anonymized before public sharing."
